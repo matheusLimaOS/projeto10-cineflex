@@ -46,6 +46,9 @@ const GlobalStyle = createGlobalStyle`
     body {
         line-height: 1;
     }
+    h2{
+        margin-block:0;
+    }
     ol, ul {
         list-style: none;
     }
