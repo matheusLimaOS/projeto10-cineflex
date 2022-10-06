@@ -17,6 +17,7 @@ export default function PaginaInicial() {
         })
 
     },[])
+    
     return (
         <ContainerPaginaInicial>
             <SubTitulo>

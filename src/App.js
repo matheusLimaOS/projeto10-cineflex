@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import Header from "./Components/header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaInicial from "./Components/PaginaInicial";
+import Sessoes from "./Components/Sessoes";
 
 export default function App() {
     return (
@@ -11,6 +12,7 @@ export default function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<PaginaInicial/>}/>
+                    <Route path="/sessoes/:idFilme" element={<Sessoes/>}/>
                 </Routes>
             </BrowserRouter>
         </>
@@ -46,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         line-height: 1;
     }
-    h2{
+    h2,h1{
         margin-block:0;
     }
     ol, ul {

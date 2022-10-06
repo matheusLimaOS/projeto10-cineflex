@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Filme(props) {
-    console.log(props); 
     return (
-        <StyledFilme>
-            <img src={props.filme.posterURL} alt={props.filme}></img>
-        </StyledFilme>        
+        <Link to={`/sessoes/`+props.filme.id}>
+            <StyledFilme>
+                <img src={props.filme.posterURL} alt={props.filme}></img>
+            </StyledFilme>
+        </Link>
     )
 }
 
