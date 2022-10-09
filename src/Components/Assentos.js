@@ -5,24 +5,21 @@ import Sessao from './Sessao'
 import Footer from "./Footer";
 import { useParams } from "react-router-dom";
 
-export default function Sessoes(props) {
-    let {idFilme} = useParams();
-    let [sessoes,setSessoes] = useState(
-        {
-            days:[]
-        }
-    );
+export default function Assentos(props) {
+    let [assentos,setAssentos] = useState([]);
+    let {idSessao} = useParams();
+
     useEffect(()=>{
-        let promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/movies/${idFilme}/showtimes`);
+        let promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSessao}/seats`);
         
         promise.then((res)=>{
-            setSessoes(res.data);
+            setAssentos(res.data);
         })
         promise.catch((error)=>{
             console.log(error.response.data)
         })
 
-    },[idFilme])
+    },[idSessao])
 
     return (
         <ContainerSessoes>
@@ -33,12 +30,12 @@ export default function Sessoes(props) {
             </SubTitulo>
             <div>
                 {
-                    sessoes.days.map((sessao)=>{
-                        return <Sessao key={sessao.id} sessao={sessao}/>
+                    assentos.days.map((assento)=>{
+                        return <Sessao key={assento.id} assento={assento}/>
                     })
                 }
             </div>
-            <Footer sessoes={sessoes} sessao={'Quinta-feira - 15:00'}/>
+            <Footer sessoes={assentos} sessao={'Quinta-feira - 15:00'}/>
         </ContainerSessoes>
     )
 }

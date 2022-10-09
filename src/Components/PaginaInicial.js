@@ -7,7 +7,7 @@ export default function PaginaInicial() {
     const [filmes,setFilmes] = useState([]);
 
     useEffect(()=>{
-        let promise = axios.get("https://mock-api.driven.com.br/api/v8/cineflex/movies");
+        let promise = axios.get("https://mock-api.driven.com.br/api/v4/cineflex/movies");
         
         promise.then((res)=>{
             setFilmes(res.data);

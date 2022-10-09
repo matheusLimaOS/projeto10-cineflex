@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaInicial from "./Components/PaginaInicial";
 import Sessoes from "./Components/Sessoes";
+import Assentos from "./Components/Assentos";
 
 export default function App() {
     return (
@@ -13,6 +14,7 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<PaginaInicial/>}/>
                     <Route path="/sessoes/:idFilme" element={<Sessoes/>}/>
+                    <Route path="/assentos/:idSessao" element={<Assentos/>}/>
                 </Routes>
             </BrowserRouter>
         </>
