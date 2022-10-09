@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import Header from "./Components/header";
+import Header from "./Components/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaInicial from "./Components/PaginaInicial";
 import Sessoes from "./Components/Sessoes";
@@ -7,9 +7,9 @@ import Sessoes from "./Components/Sessoes";
 export default function App() {
     return (
         <>
-            <GlobalStyle/>
-            <Header/>
+            <GlobalStyle/>  
             <BrowserRouter>
+                <Header/>
                 <Routes>
                     <Route path="/" element={<PaginaInicial/>}/>
                     <Route path="/sessoes/:idFilme" element={<Sessoes/>}/>
