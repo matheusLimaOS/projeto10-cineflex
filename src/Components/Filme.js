@@ -5,7 +5,7 @@ export default function Filme(props) {
     return (
         <Link to={`/sessoes/`+props.filme.id}>
             <StyledFilme>
-                <img src={props.filme.posterURL} alt={props.filme}></img>
+                <img data-identifier="movie-outdoor" src={props.filme.posterURL} alt={props.filme}></img>
             </StyledFilme>
         </Link>
     )
