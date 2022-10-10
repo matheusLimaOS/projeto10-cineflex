@@ -36,5 +36,10 @@ const StyledAssento = styled.div`
         background: ${props=>props.cor};
         border: 1px solid #808F9D;
         border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        text-align: center;
+        color: black;
     }
 `
