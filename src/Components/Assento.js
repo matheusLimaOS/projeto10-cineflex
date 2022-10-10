@@ -6,6 +6,7 @@ export default function Assento(props) {
         <>
             <StyledAssento 
                 cor={props.assento.isAvailable ? props.selecionados.includes(Number(props.assento.name)) ? '#1AAE9E' : '#C3CFD9' : '#FBE192'}
+                border={props.assento.isAvailable ? props.selecionados.includes(Number(props.assento.name)) ? '#0E7D71' : '#808F9D' : '#F7C52B'}
             >
                 <button onClick={()=>{handleClick(props.selecionados,props.setSelecionados,props.assento.name)}} disabled={!props.assento.isAvailable}>{props.assento.name}</button>
             </StyledAssento>
@@ -34,7 +35,7 @@ const StyledAssento = styled.div`
         width: 26px;
         height: 26px;
         background: ${props=>props.cor};
-        border: 1px solid #808F9D;
+        border: 1px solid ${props=>props.border};
         border-radius: 12px;
         display: flex;
         align-items: center;
