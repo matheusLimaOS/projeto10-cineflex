@@ -15,14 +15,14 @@ export default function Sucesso() {
                     <Container>
                         <div>
                             <h2>Filme e sessão</h2>
-                            <p>{location.state.assentos.movie.title}</p>
-                            <p>{location.state.assentos.day.date} - {location.state.assentos.name}</p>
+                            <p data-identifier="movie-session-infos-reserve-finished">{location.state.assentos.movie.title}</p>
+                            <p data-identifier="movie-session-infos-reserve-finished">{location.state.assentos.day.date} - {location.state.assentos.name}</p>
                         </div>
                         <div>
                             <h2>Ingressos</h2>
                             {
                                 location.state.selecionados.map((selecionado, index) => {
-                                    return <p key={index}>Assento {selecionado}</p>
+                                    return <p data-identifier="seat-infos-reserve-finished" key={index}>Assento {selecionado}</p>
                                 })
                             }
                         </div>
@@ -30,7 +30,7 @@ export default function Sucesso() {
                             <h2>Comprador(es)</h2>
                             {
                                 location.state.compradores.map((comprador, index) => {
-                                    return <p key={index}>
+                                    return <p data-identifier="buyer-infos-reserve-finished" key={index}>
                                         Nome: {comprador.nome}
                                         <br />
                                         CPF: {comprador.cpf}
@@ -40,7 +40,7 @@ export default function Sucesso() {
                         </div>
                         <ContainerBotao>
                             <Link to='/'>
-                                <button>Voltar pra Home</button>
+                                <button data-identifier="back-to-home-btn">Voltar pra Home</button>
                             </Link>
                         </ContainerBotao>
                     </Container> : ''   
