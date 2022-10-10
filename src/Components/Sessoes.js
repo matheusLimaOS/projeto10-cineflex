@@ -9,11 +9,13 @@ export default function Sessoes(props) {
     let {idFilme} = useParams();
     let [sessoes,setSessoes] = useState(
         {
-            days:[]
+            days:[],
+            title:'',
+            posterURL:''
         }
     );
     useEffect(()=>{
-        let promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/movies/${idFilme}/showtimes`);
+        let promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${idFilme}/showtimes`);
         
         promise.then((res)=>{
             setSessoes(res.data);
@@ -38,7 +40,7 @@ export default function Sessoes(props) {
                     })
                 }
             </div>
-            <Footer sessoes={sessoes} sessao={'Quinta-feira - 15:00'}/>
+            <Footer poster={sessoes.posterURL} title={sessoes.title}/>
         </ContainerSessoes>
     )
 }

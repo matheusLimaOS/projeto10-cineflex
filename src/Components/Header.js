@@ -16,7 +16,7 @@ export default function Header() {
 }
 
 function voltar(navigate){
-    navigate(-1);
+    navigate(-1,);
 }
 
 const ContainerHeader = styled.div`

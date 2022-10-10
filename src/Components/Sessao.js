@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export default function Filme(props) {
+export default function Sessao(props) {
     return (
         <StyledSessao>
             <h1>{`${props.sessao.weekday} - ${props.sessao.date}`}</h1>
             {
                 props.sessao.showtimes.map((showtime)=>{
-                    return <Link>
+                    return <Link key={showtime.id} to={'/assentos/'+showtime.id}>
                         <button>
                             {showtime.name}
                         </button>

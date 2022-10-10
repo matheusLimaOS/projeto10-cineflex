@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export default function Footer(props) {
-    console.log(props.sessoes);
     return (
         <ContainerFooter>
             <ContainerPoster>
-                <img src={props.sessoes.posterURL} alt={props.sessoes.title}></img>
+                <img src={props.poster} alt={props.title}></img>
             </ContainerPoster>
             <ContainerFIlme>
-                <h1>{props.sessoes.title}</h1>
+                <h1>{props.title}</h1>
                 {
                     props.sessao === undefined ? '' : <h1>{props.sessao}</h1> 
                 }

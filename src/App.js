@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaInicial from "./Components/PaginaInicial";
 import Sessoes from "./Components/Sessoes";
 import Assentos from "./Components/Assentos";
+import Sucesso from "./Components/Sucesso";
 
 export default function App() {
     return (
@@ -15,6 +16,7 @@ export default function App() {
                     <Route path="/" element={<PaginaInicial/>}/>
                     <Route path="/sessoes/:idFilme" element={<Sessoes/>}/>
                     <Route path="/assentos/:idSessao" element={<Assentos/>}/>
+                    <Route path="/sucesso" element={<Sucesso/>}/>
                 </Routes>
             </BrowserRouter>
         </>
