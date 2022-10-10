@@ -53,15 +53,15 @@ export default function Assentos() {
                 </StyledAssentos>
             </ContainerAssentos>
             <Legenda>
-                <ButtonLegenda cor='#1AAE9E' border='#0E7D71'>
+                <ButtonLegenda data-identifier="seat-selected-subtitle" cor='#1AAE9E' border='#0E7D71'>
                     <button disabled />
                     <p>Selecionado</p>
                 </ButtonLegenda>
-                <ButtonLegenda cor="#C3CFD9" border='#7B8B99'>
+                <ButtonLegenda data-identifier="seat-available-subtitle" cor="#C3CFD9" border='#7B8B99'>
                     <button disabled />
                     <p>Disponível</p>
                 </ButtonLegenda>
-                <ButtonLegenda cor='#FBE192' border='#F7C52B'>
+                <ButtonLegenda data-identifier="seat-unavailable-subtitle" cor='#FBE192' border='#F7C52B'>
                     <button disabled />
                     <p>Indisponível</p>
                 </ButtonLegenda>
