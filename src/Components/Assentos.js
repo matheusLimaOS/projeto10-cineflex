@@ -72,7 +72,7 @@ export default function Assentos() {
                         return <Form key={index} selecionado={selecionado}></Form>
                     })
                 }
-                <button type="submit">Reservar assento(s)</button>
+                <button data-identifier="reservation-btn" type="submit">Reservar assento(s)</button>
             </Formulario>
             <Footer poster={assentos.movie.posterURL} title={assentos.movie.title} sessao={`${assentos.day.weekday} - ${assentos.name}`} />
         </Container>
