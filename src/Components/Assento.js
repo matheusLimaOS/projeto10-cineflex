@@ -8,7 +8,7 @@ export default function Assento(props) {
                 cor={props.assento.isAvailable ? props.selecionados.includes(Number(props.assento.name)) ? '#1AAE9E' : '#C3CFD9' : '#FBE192'}
                 border={props.assento.isAvailable ? props.selecionados.includes(Number(props.assento.name)) ? '#0E7D71' : '#808F9D' : '#F7C52B'}
             >
-                <button onClick={()=>{handleClick(props.selecionados,props.setSelecionados,props.assento.name)}} disabled={!props.assento.isAvailable}>{props.assento.name}</button>
+                <button data-identifier="seat" onClick={()=>{handleClick(props.selecionados,props.setSelecionados,props.assento.name)}} disabled={!props.assento.isAvailable}>{props.assento.name}</button>
             </StyledAssento>
         </>
     )
