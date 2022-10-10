@@ -4,12 +4,12 @@ export default function Footer(props) {
     return (
         <ContainerFooter>
             <ContainerPoster>
-                <img src={props.poster} alt={props.title}></img>
+                <img data-identifier="movie-img-preview" src={props.poster} alt={props.title}></img>
             </ContainerPoster>
             <ContainerFIlme>
-                <h1>{props.title}</h1>
+                <h1 data-identifier="movie-and-session-infos-preview">{props.title}</h1>
                 {
-                    props.sessao === undefined ? '' : <h1>{props.sessao}</h1> 
+                    props.sessao === undefined ? '' : <h1 data-identifier="movie-and-session-infos-preview">{props.sessao}</h1> 
                 }
             </ContainerFIlme>
         </ContainerFooter>
